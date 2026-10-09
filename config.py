@@ -43,6 +43,16 @@ TENANT_PROFILE = os.getenv("TENANT_PROFILE", "").strip()
 
 DB_PATH = os.getenv("DB_PATH", "state.json").strip()
 
+# --- Modo agencias ---
+FUENTES_PATH = os.getenv("FUENTES_PATH", "fuentes.csv").strip()
+MAX_PRICE = _int("MAX_PRICE", 1500)
+HOUSING_ONLY = _bool("HOUSING_ONLY", True)
+# Horas (hora de España) a las que chequear las agencias.
+CHECK_HOURS = sorted(
+    {int(h) for h in os.getenv("CHECK_HOURS", "9,11,15,18").split(",") if h.strip().isdigit()}
+)
+AGENCY_STATE_PATH = os.getenv("AGENCY_STATE_PATH", "agencias_state.json").strip()
+
 
 def validate() -> list[str]:
     """Devuelve una lista de problemas de configuración (vacía si todo OK)."""

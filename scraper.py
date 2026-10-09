@@ -1,14 +1,19 @@
-"""Descarga la página de resultados vía Bright Data Web Unlocker y extrae los anuncios."""
+"""Descarga páginas (Bright Data Web Unlocker o requests) y utilidades de parseo."""
 import re
 from dataclasses import dataclass, field
 
 import requests
 from bs4 import BeautifulSoup
+from markdownify import markdownify as _md
 
 import config
 
 BRIGHTDATA_ENDPOINT = "https://api.brightdata.com/request"
 LISTING_ID_RE = re.compile(r"/inmueble/(\d+)")
+BROWSER_UA = (
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+)
 
 
 @dataclass
@@ -29,27 +34,56 @@ def _ordered_url(search_url: str) -> str:
     return f"{search_url}{sep}ordenado-por=fecha-publicacion-desc"
 
 
-def fetch_html(search_url: str) -> str:
-    """Devuelve el HTML de la búsqueda, resuelto por Bright Data Web Unlocker.
-
-    Web Unlocker salta DataDome por su cuenta y devuelve el HTML ya renderizado.
-    Solo pagas los requests que salen bien.
-    """
+def _brightdata_fetch(url: str) -> str:
+    """HTML renderizado por Bright Data Web Unlocker (salta JS y anti-bots)."""
     resp = requests.post(
         BRIGHTDATA_ENDPOINT,
         headers={
             "Authorization": f"Bearer {config.BRIGHTDATA_API_KEY}",
             "Content-Type": "application/json",
         },
-        json={
-            "zone": config.BRIGHTDATA_ZONE,
-            "url": _ordered_url(search_url),
-            "format": "raw",
-        },
+        json={"zone": config.BRIGHTDATA_ZONE, "url": url, "format": "raw"},
         timeout=120,
     )
     resp.raise_for_status()
     return resp.text
+
+
+def fetch_html(search_url: str) -> str:
+    """(Idealista) búsqueda ordenada por fecha vía Bright Data."""
+    return _brightdata_fetch(_ordered_url(search_url))
+
+
+def fetch_page(url: str, force_render: bool = False) -> str:
+    """(Agencias) HTML de la página.
+
+    Intenta primero con un request normal (gratis). Si la web es JavaScript y
+    devuelve una cáscara vacía, reintenta con Bright Data (que renderiza el JS).
+    """
+    if not force_render:
+        try:
+            r = requests.get(url, headers={"User-Agent": BROWSER_UA}, timeout=30)
+            if r.ok:
+                soup = BeautifulSoup(r.text, "html.parser")
+                for t in soup(["script", "style", "noscript"]):
+                    t.decompose()
+                text = soup.get_text(" ", strip=True)
+                if len(text) > 1500:  # texto real; si es cáscara JS, caemos a render
+                    return r.text
+        except requests.RequestException:
+            pass
+    return _brightdata_fetch(url)
+
+
+def to_markdown(html: str, max_chars: int = 50000) -> str:
+    """Convierte el HTML a markdown compacto (conserva enlaces y precios).
+
+    Markdown ocupa mucho menos que el HTML y mantiene lo que el extractor
+    necesita, así que abarata y simplifica la llamada a Claude.
+    """
+    m = _md(html, strip=["script", "style", "nav", "footer", "header", "svg", "img"])
+    m = "\n".join(line for line in m.splitlines() if line.strip())
+    return m[:max_chars]
 
 
 def parse_listings(html: str) -> list[Listing]:
