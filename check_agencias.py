@@ -12,6 +12,7 @@ from __future__ import annotations
 import csv
 import hashlib
 import logging
+import os
 import re
 import sys
 from datetime import datetime
@@ -105,7 +106,8 @@ def run() -> None:
         log.error("Config incompleta:\n - %s", "\n - ".join(problems))
         sys.exit(1)
 
-    if not in_check_hour():
+    force = os.getenv("FORCE_RUN", "").strip().lower() in ("1", "true", "yes")
+    if not force and not in_check_hour():
         log.info("Fuera de horario (%s, %s). No hago nada.",
                  config.CHECK_HOURS, config.TIMEZONE)
         return

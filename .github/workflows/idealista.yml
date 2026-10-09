@@ -38,6 +38,8 @@ jobs:
           HOUSING_ONLY: "true"
           CHECK_HOURS: "9,11,15,18"
           TIMEZONE: Europe/Madrid
+          # En ejecuciones manuales (Run workflow) ignora el horario y corre igual.
+          FORCE_RUN: ${{ github.event_name == 'workflow_dispatch' }}
         run: python check_agencias.py
 
       - name: Guardar estado
