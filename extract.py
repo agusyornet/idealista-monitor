@@ -50,19 +50,36 @@ def _parse_json_array(text: str) -> list:
         text = text.split("```", 2)[1]
         if text.lstrip().startswith("json"):
             text = text.lstrip()[4:]
-    start, end = text.find("["), text.rfind("]")
-    if start == -1 or end == -1:
+    start = text.find("[")
+    if start == -1:
         return []
-    try:
-        return json.loads(text[start : end + 1])
-    except json.JSONDecodeError:
-        return []
+    end = text.rfind("]")
+    if end != -1:
+        try:
+            return json.loads(text[start : end + 1])
+        except json.JSONDecodeError:
+            pass
+    # Rescate: si el array viene cortado (muchos anuncios), parseamos objeto a
+    # objeto y nos quedamos con los completos.
+    out = []
+    dec = json.JSONDecoder()
+    i = text.find("{", start)
+    while i != -1:
+        try:
+            obj, j = dec.raw_decode(text, i)
+        except json.JSONDecodeError:
+            break
+        out.append(obj)
+        i = text.find("{", j)
+    return out
 
 
 def extract_listings(markdown: str, base_url: str, agency: str) -> list[AgencyListing]:
+    if len(markdown.strip()) < 300:  # página vacía/cáscara JS: no gastamos una llamada
+        return []
     resp = _get_client().messages.create(
         model=config.CLAUDE_MODEL,
-        max_tokens=4000,
+        max_tokens=8000,
         system=SYSTEM,
         messages=[{"role": "user", "content": markdown}],
     )

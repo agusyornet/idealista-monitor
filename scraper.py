@@ -78,10 +78,14 @@ def fetch_page(url: str, force_render: bool = False) -> str:
 def to_markdown(html: str, max_chars: int = 50000) -> str:
     """Convierte el HTML a markdown compacto (conserva enlaces y precios).
 
-    Markdown ocupa mucho menos que el HTML y mantiene lo que el extractor
-    necesita, así que abarata y simplifica la llamada a Claude.
+    Limpia primero scripts/estilos/head (config de cookies, JSON de schema.org,
+    etc.) para que el markdown sea solo contenido visible: así no se desperdicia
+    el presupuesto de caracteres ni se confunde al extractor.
     """
-    m = _md(html, strip=["script", "style", "nav", "footer", "header", "svg", "img"])
+    soup = BeautifulSoup(html, "html.parser")
+    for t in soup(["script", "style", "noscript", "svg", "head"]):
+        t.decompose()
+    m = _md(str(soup), strip=["img"])
     m = "\n".join(line for line in m.splitlines() if line.strip())
     return m[:max_chars]
 
