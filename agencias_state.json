@@ -1,0 +1,42 @@
+{
+"hashes": {
+"http://proddigia.com/alquiler/": "d93f81acdc9b951aa43dccf3766d1edc30ad5c74713ea9529aa51b5f6e0382ff",
+"http://www.myhousebarcelona.com/en/zone-type/barcelona-en/": "6f2fce9f3c1ccb5e23c76758d0e78d1f0f39ead62a31321180b0763348bf5c5f",
+"https://all4flat.com/en/collections/pisos-larga-estancia?page=1": "c4ba99702918006e8e1d0c22f17342ec7f927994d05df0a16cb5d16ed5d42d23",
+"https://inmobiliaria.calvetpremium.com/es/alquiler": "a86d08164dd9d94fc12e3e63421b89e648e4fbe18964d63c50ca60f61b3187d9",
+"https://puntohabitat.es/pisos-alquiler-barcelona/?town%5B%5D=106199&type%5B%5D=3399": "b5e56d4adeb150b0159ab9f24910ca8570076f21c63fe5fc2bfe5d147994c422",
+"https://www.aproperties.es/en/search?mod=rental&zone=1&area=1&price-to=1500&order=": "95ca40a5e80d78d1bc76f63360db4fe76d6e29ba0108fd024573d2b712d3ef5a",
+"https://www.casamona.com/en/for-rent/_city:barcelona,pricemax:1500,mode:mosaic,d:created-desc,p:1/": "1ba7dadad29839bebf04042f0a9c65f058bff9ba621daf5d9fade0ab7cab9596",
+"https://www.engelvoelkers.com/es/es/propertysearch?businessArea[]=residential&mapMode=place_mode&page=1&placeIds[]=ChIJ9SjtJnGYpBIRMAOkIeD6AAQ&placeName=Barcelona&price.max=1500&propertyMarketingType[]=rent&searchMode=classic": "14b0b1f795082a5e8056b27ff5ae39bf15f03ca396c44fc6bb3497d3c6ad50c4",
+"https://www.finquesteixidor.com/es/": "2090a94d8801f2078ba8f3f327e5a633bd70b330b414309cd85c801e443add53",
+"https://www.locabarcelona.com/en/property-status/long-term-rental/": "c15aa810dbd70d16b5f9f6164135f53e653a9dea2f4ac8463604fd8d69f75f09",
+"https://www.monapart.com/viviendas-barcelona-alquiler?priceRange=700%2C1500": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+"https://www.onixrenta.com/viviendas/": "f14a80a5b09f26b3f14aaf27d59a76ac2954544dccce647e6a8a8667bb9c0f23",
+"https://www.urbanegroup.es/en/search?o=rental&a=1&pf=0&pt=1500": "7cc89412f2afc3dc298a3ee8be0189be530d77338714ba9e39f20f906213d1ad",
+"https://www.vivalco.com/properties/?status=928&type=406&feature%5B%5D=1019": "82ed3f9f11f71ad8962b316398bdd95826ca61ddfd25b903d6ea36c0efc8a52a"
+},
+"seen": {
+"http://www.myhousebarcelona.com/en/1794/": 1791727075,
+"http://www.myhousebarcelona.com/en/amazing-flat-in-the-new-building-with-pool/": 1791727075,
+"http://www.myhousebarcelona.com/en/apartment-in-fort-pienc/": 1791727075,
+"http://www.myhousebarcelona.com/en/apartment-with-pool-close-to-the-park-and-beach/": 1791727075,
+"https://all4flat.com/en/products/c-can-ros-ref-001845af?variant=52895111053576": 1791726949,
+"https://inmobiliaria.calvetpremium.com/es/alquiler/ref-4141": 1791727014,
+"https://inmobiliaria.calvetpremium.com/es/alquiler/ref-4143": 1791727014,
+"https://inmobiliaria.calvetpremium.com/es/alquiler/ref-4151": 1791727014,
+"https://inmobiliaria.calvetpremium.com/es/alquiler/ref-4152": 1791727014,
+"https://inmobiliaria.calvetpremium.com/es/alquiler/ref-4156": 1791727014,
+"https://www.aproperties.es/en/barcelona/el-raval/46-sqm-flat-for-rent-in-el-raval-barcelona": 1791727049,
+"https://www.engelvoelkers.com/es/es/exposes/2082c39a-580c-5b6a-a3cd-3a103b2e2f9c": 1791727061,
+"https://www.finquesteixidor.com/es/alquiler-pisos-barcelona.cfm/ID/106787/ESP/borne-carders-temporada.htm": 1791726970,
+"https://www.locabarcelona.com/en/property/housing-maternitat-sant-ramon-barcelona-la31pis514/": 1791727027,
+"https://www.locabarcelona.com/en/property/long-term-rental-barcelona-laeb22mas868/": 1791727027,
+"https://www.locabarcelona.com/en/property/property-barceloneta-hospitalet-longterm-la23vin94/": 1791727027,
+"https://www.onixrenta.com/viviendas/6337": 1791727058,
+"https://www.urbanegroup.es/en/barcelona/barrio-gotico/3-bedroom-rental-near-plaza-catalunya-and-plaza-urquinaona-available-now-for-6-11-months": 1791727052,
+"https://www.urbanegroup.es/en/barcelona/barrio-gotico/4824-cozy-1-bedroom-apartment-in-calle-vidre-barcelona": 1791727052,
+"https://www.vivalco.com/property/ref-1898-apartamento-en-alquiler-en-la-zona-de-la-barceloneta-barcelona-30m2/": 1791726945,
+"https://www.vivalco.com/property/ref-3016-atico-en-alquiler-en-la-zona-de-el-born-barcelona-43m2/": 1791726945,
+"https://www.vivalco.com/property/ref-4296-piso-en-alquiler-en-la-zona-de-gracia-barcelona-59m2/": 1791726945
+}
+}
