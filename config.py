@@ -45,7 +45,7 @@ DB_PATH = os.getenv("DB_PATH", "state.json").strip()
 
 # --- Modo agencias ---
 FUENTES_PATH = os.getenv("FUENTES_PATH", "fuentes.csv").strip()
-MAX_PRICE = _int("MAX_PRICE", 1500)
+MAX_PRICE = _int("MAX_PRICE", 1400)
 HOUSING_ONLY = _bool("HOUSING_ONLY", True)
 # Horas (hora de España) a las que chequear las agencias.
 CHECK_HOURS = sorted(

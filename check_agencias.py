@@ -64,11 +64,19 @@ def validate() -> list[str]:
 
 
 def load_fuentes():
+    """Devuelve (nombre, url, max_price). max_price vacío -> usa config.MAX_PRICE."""
+    out = []
     with open(config.FUENTES_PATH, encoding="utf-8") as f:
-        return [(r["nombre"], r["url"]) for r in csv.DictReader(f) if r.get("url")]
+        for r in csv.DictReader(f):
+            if not r.get("url"):
+                continue
+            mp = (r.get("max_price") or "").strip()
+            out.append((r["nombre"], r["url"], int(mp) if mp.isdigit() else config.MAX_PRICE))
+    return out
 
 
-def process_agency(name: str, url: str, state: AgencyState, first_run: bool) -> int:
+def process_agency(name: str, url: str, state: AgencyState, first_run: bool,
+                   max_price: int) -> int:
     """Procesa una agencia. Devuelve cuántos anuncios nuevos avisó."""
     html = scraper.fetch_page(url)
     mkd = scraper.to_markdown(html)
@@ -118,9 +126,9 @@ def run() -> None:
         log.info("Primer arranque: marcaré lo existente como visto SIN avisar.")
 
     total = 0
-    for name, url in load_fuentes():
+    for name, url, max_price in load_fuentes():
         try:
-            total += process_agency(name, url, state, first_run)
+            total += process_agency(name, url, state, first_run, max_price)
         except Exception as e:  # noqa: BLE001
             log.error("[%s] error: %s", name, e)
 

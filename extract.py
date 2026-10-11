@@ -21,7 +21,8 @@ Cada elemento del array es un objeto con estas claves exactas:
 - "title": título del anuncio.
 - "price_eur": alquiler MENSUAL en euros como número entero (sin símbolos ni \
 puntos de miles). null si no hay precio claro.
-- "property_type": uno de "vivienda", "local", "oficina", "despacho", "parking", "otro".
+- "property_type": uno de "vivienda", "local", "oficina", "despacho", "parking", \
+"garaje", "trastero", "nave", "terreno", "edificio", "otro".
 - "status": uno de "disponible", "reservado", "alquilado", "desconocido".
 
 Reglas:
@@ -30,8 +31,12 @@ Reglas:
 interese": no son resultados reales de la búsqueda.
 - Si la página dice que no hay resultados, devuelve [].
 - No inventes anuncios ni precios. Si un dato no está, usa null o "desconocido".
-- Un piso/apartamento/ático/estudio/dúplex es "vivienda". Un local comercial es \
-"local". Una plaza de garaje es "parking".
+- Un piso/apartamento/ático/estudio/dúplex/casa es "vivienda". Un local comercial \
+es "local". Una oficina/despacho es "oficina". Una plaza de aparcamiento o garaje \
+es "parking".
+- IMPORTANTE: si dudas entre vivienda y otra cosa, usa "vivienda" o "otro". NO \
+etiquetes como "local"/"oficina"/"parking" algo que podría ser una vivienda — solo \
+usa esas categorías cuando el inmueble es claramente comercial o una plaza/garaje.
 """
 
 
