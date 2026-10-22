@@ -2,19 +2,19 @@
 "hashes": {
 "http://proddigia.com/alquiler/": "d93f81acdc9b951aa43dccf3766d1edc30ad5c74713ea9529aa51b5f6e0382ff",
 "http://www.myhousebarcelona.com/en/zone-type/barcelona-en/": "6f2fce9f3c1ccb5e23c76758d0e78d1f0f39ead62a31321180b0763348bf5c5f",
-"https://all4flat.com/en/collections/pisos-larga-estancia?page=1": "cec89085c1518068b3140241c5f97e43a71364cd92d1d71e121b7a910897f542",
+"https://all4flat.com/en/collections/pisos-larga-estancia?page=1": "6190e66acbbc51307f5069e13b654073408be76c90e9e510b56a0d8d474bbc91",
 "https://barcelona40.tecnocasa.es/inmuebles-en-alquiler": "22371bc32af74aa261ab6458e91796a1a987564dd1e1e9b9f342178b85103c40",
 "https://inmobiliaria.calvetpremium.com/es/alquiler": "4858c3b5971c0576f49c00be2851b990e8e4139220f8b22f000b2cd3000a822a",
 "https://puntohabitat.es/pisos-alquiler-barcelona/?town%5B%5D=106199&type%5B%5D=3399": "50df611af07300805d758cac74bff9d05deb5b3b7ee0f38c4eb585404eccc0f1",
-"https://www.aproperties.es/en/search?mod=rental&zone=1&area=1&price-to=1500&order=": "2623e88b51e144fbab822f6501b5f58b588cfb9ea2c1a1effcaf2ead870061f4",
-"https://www.casamona.com/en/for-rent/_city:barcelona,pricemax:1500,mode:mosaic,d:created-desc,p:1/": "162ece9b0a1404afd6ca1e68c33dc92e68a4311a9202ca478d0ac02db071276d",
+"https://www.aproperties.es/en/search?mod=rental&zone=1&area=1&price-to=1500&order=": "c6c252fc0bf98dae11b2c7912b683bcf8597cbead1edaad8b84665fc07d1e842",
+"https://www.casamona.com/en/for-rent/_city:barcelona,pricemax:1500,mode:mosaic,d:created-desc,p:1/": "d4eb77a92c0b50892cac31f398b2915989a179febd1310a64508b39c7228f3bf",
 "https://www.engelvoelkers.com/es/es/propertysearch?businessArea[]=residential&mapMode=place_mode&page=1&placeIds[]=ChIJ9SjtJnGYpBIRMAOkIeD6AAQ&placeName=Barcelona&price.max=1500&propertyMarketingType[]=rent&searchMode=classic": "14b0b1f795082a5e8056b27ff5ae39bf15f03ca396c44fc6bb3497d3c6ad50c4",
-"https://www.finquesteixidor.com/es/": "1c874a8d47e5655f79cfdb69c1bee6df9264f065441c76c49bad0580c66c4321",
-"https://www.locabarcelona.com/en/property-status/long-term-rental/": "a1fb4a4ec622de3e3faffbe012efba97d0cc9342ac07d4634d1463d88ee5300d",
-"https://www.monapart.com/viviendas-barcelona-alquiler?priceRange=700%2C1500": "7840e2b87b4065d194efb159cd1baebfdd9c6baf531088bfc83ab9fcf0bab24f",
+"https://www.finquesteixidor.com/es/": "1d6749db3322125c8f32c4beef272f21039f79172911fc6905bb5c80e1cf5671",
+"https://www.locabarcelona.com/en/property-status/long-term-rental/": "7511d3d99730b99028690ae0d291635b0a649a2756b732f237faa78d38fcfb78",
+"https://www.monapart.com/viviendas-barcelona-alquiler?priceRange=700%2C1500": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
 "https://www.onixrenta.com/viviendas/": "cc10f4f02f94b06c91885f2f51214d359d6a32a3ad99697ca2b2e818889657bf",
-"https://www.urbanegroup.es/en/search?o=rental&a=1&pf=0&pt=1500": "87fe7bca170d732977a090ccd535820b7cc4673dc3aa52b5cc1800e59b4a42d6",
-"https://www.vivalco.com/properties/?status=928&type=406&feature%5B%5D=1019": "022ea00ff4ecb95eea303037952a135f8b8b3fd44855b3f10ffbb618d4f6a20e"
+"https://www.urbanegroup.es/en/search?o=rental&a=1&pf=0&pt=1500": "0dfd923069932f274cec396dc21df8d0ce9ea9c7b8071dab558be06ff8b49542",
+"https://www.vivalco.com/properties/?status=928&type=406&feature%5B%5D=1019": "7a0e2d52a292edf9458a049dcb29b03eff166aee6268d8f1cf19e94dedaed8cf"
 },
 "seen": {
 "http://www.myhousebarcelona.com/en/1794/": 1791727075,
