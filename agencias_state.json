@@ -4,7 +4,7 @@
 "http://www.myhousebarcelona.com/en/zone-type/barcelona-en/": "6f2fce9f3c1ccb5e23c76758d0e78d1f0f39ead62a31321180b0763348bf5c5f",
 "https://all4flat.com/en/collections/pisos-larga-estancia?page=1": "2eca0bb8a0a40c694e184833dc1cd89b3019d5f261731e129fc8bf050636c76f",
 "https://barcelona40.tecnocasa.es/inmuebles-en-alquiler": "390d057187806dc30e9d45773524d0733f2f311253bf046c0bc69252fe806fd4",
-"https://inmobiliaria.calvetpremium.com/es/alquiler": "123d45cd6b51d2b07f028f4fbec1e69406a8a7f22c70ec3ac007faa2609bc41f",
+"https://inmobiliaria.calvetpremium.com/es/alquiler": "daf125602422572c99562cc866d5b2c176e739c01310def723cdd24226e4cb35",
 "https://puntohabitat.es/pisos-alquiler-barcelona/?town%5B%5D=106199&type%5B%5D=3399": "1e1bbe9f5a828ad2a2856587b2f8611ffc75c524744406581af4bf16a98b1e0a",
 "https://www.aproperties.es/en/search?mod=rental&zone=1&area=1&price-to=1500&order=": "f55c03bf7e8e4d781532813be7aa5f109e7ddc2e428bd221d3d0998df901c8e8",
 "https://www.casamona.com/en/for-rent/_city:barcelona,pricemax:1500,mode:mosaic,d:created-desc,p:1/": "ded6269b2838e0d6284611a4930992ecb0187d12965efb6d108881e28c0cc200",
@@ -13,7 +13,7 @@
 "https://www.locabarcelona.com/en/property-status/long-term-rental/": "7c0e2761803b82255ce966503c6e6773d0d502446511b8be11a3e81d7e55fe41",
 "https://www.monapart.com/viviendas-barcelona-alquiler?priceRange=700%2C1500": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
 "https://www.onixrenta.com/viviendas/": "f3ed8bbdb90bec9180d390df5251cf40eacfc7bc2d40fcbbf2d168ff243b98a4",
-"https://www.urbanegroup.es/en/search?o=rental&a=1&pf=0&pt=1500": "7e057ce91be9092af19a6903c5da60fbfa939bde70f2ccc5d49d1a54b686db44",
+"https://www.urbanegroup.es/en/search?o=rental&a=1&pf=0&pt=1500": "38c3f1481ec9a3773cc1776f0a598156baf10d4e8eaa65539802298e6bd7c38e",
 "https://www.vivalco.com/properties/?status=928&type=406&feature%5B%5D=1019": "3dacfbc885236dbc80e70697a2cba8418317f7d597e3fdb30c2ca870d712f9aa"
 },
 "seen": {
@@ -45,6 +45,7 @@
 "https://inmobiliaria.calvetpremium.com/es/alquiler/ref-4178": 1793782499,
 "https://inmobiliaria.calvetpremium.com/es/alquiler/ref-4179": 1793782500,
 "https://inmobiliaria.calvetpremium.com/es/alquiler/ref-4184": 1794393429,
+"https://inmobiliaria.calvetpremium.com/es/alquiler/ref-4198": 1795860242,
 "https://www.aproperties.es/en/barcelona/baix-guinardo/70-sqm-flat-with-parking-and-views-for-rent-in-baix-guinardo-barcelona": 1795802451,
 "https://www.aproperties.es/en/barcelona/eixample-esquerra/36-sqm-flat-for-rent-in-eixample-esquerra-barcelona": 1795281404,
 "https://www.aproperties.es/en/barcelona/eixample-esquerra/50-sqm-flat-for-rent-in-eixample-esquerra-barcelona": 1795281405,
